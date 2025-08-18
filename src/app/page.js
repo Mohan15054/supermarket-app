@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "@/components/Header";
 import CardList from "@/components/Cards/CardList";
+import Navigation from "@/components/Navigation/Navigation";
 
 export default function Home() {
   const cards = [
@@ -85,7 +86,13 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
+      <Navigation />
       <main className={styles.main}>
+        <div style={{ marginBottom: '1rem', padding: '1rem', backgroundColor: '#000000ff', borderRadius: '8px' }}>
+          <h2>🏠 Default Next.js Page (SSG by default)</h2>
+          <p><strong>This is your original home page with static data.</strong></p>
+          <p>Use the navigation above to see different rendering approaches!</p>
+        </div>
         <CardList cards={cards} />
       </main>
     </div>
