@@ -1,0 +1,173 @@
+.sidebar-container {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #1f2937;
+  color: white;
+  position: fixed;
+  height: 100vh;
+  transition: all 0.3s ease;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sidebar-open {
+  width: 16rem;
+}
+
+.sidebar-closed {
+  width: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+}
+
+.user-profile {
+  padding: 1.7rem;
+  border-bottom: 2px solid #4b5563;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar {
+  width: 3rem;
+  height: 3rem;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.user-avatar span {
+  color: white;
+  font-weight: 600;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #ef4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-badge span {
+  font-size: 0.75rem;
+  color: white;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.user-email {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.nav-menu {
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  margin: 0;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+/* .menu-button:hover {
+  color: white;
+  background-color: #374151;
+} */
+
+.menu-button.active {
+  background-color: #448432;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 1.55rem;
+}
+
+.menu-text {
+  font-weight: 500;
+}
+
+.main-content {
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.main-content-shifted {
+  margin-left: 16rem;
+}
+
+.main-content-normal {
+  margin-left: 0;
+}
+
+.toggle-button-container {
+  padding: 1rem;
+}
+
+.toggle-button {
+  background-color: #374151;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #4b5563;
+}
+
+.toggle-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
