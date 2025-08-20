@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  output: 'export',          // ✅ needed for static export
+  trailingSlash: true,       // ✅ helps avoid 404s on GitHub Pages
   images: {
-    unoptimized: true
+    unoptimized: true,       // ✅ required (no Image Optimization on GH Pages)
   },
-  // Set the basePath and assetPrefix for GitHub Pages
-  // Replace 'your-repo-name' with your actual repository name
-  basePath: '/supermarket-app',
-  assetPrefix: '/supermarket-app/',
+  basePath: '/supermarket-app',   // ✅ repo name as base path
+  assetPrefix: '/supermarket-app/', // ✅ ensures static assets load correctly
 };
 
 export default nextConfig;
