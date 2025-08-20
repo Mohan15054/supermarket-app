@@ -62,7 +62,7 @@ export default function Expenses() {
       <div className="card expenses-summary">
         <div className="expenses-summary-header">
           <div className="expenses-total-section">
-            <h2 className="expenses-total-label">This Month's Total</h2>
+            <h2 className="expenses-total-label">This Month&apos;s Total</h2>
             <div className="expenses-total-amount">
               {formatCurrency(thisMonthTotal)}
             </div>
