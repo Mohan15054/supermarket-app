@@ -163,7 +163,7 @@ export default function Summary() {
 
       {/* Calendar Heatmap */}
       <div className="card" style={{ marginBottom: '2rem' }}>
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>Daily Spending (Current Month)</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>Daily Spending (Current Month)</h2>
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(7, 1fr)', 
@@ -174,7 +174,7 @@ export default function Summary() {
             <div key={day} style={{ 
               textAlign: 'center', 
               fontSize: '0.75rem', 
-              color: '#64748b',
+              color: 'var(--color-text-secondary)',
               padding: '0.5rem'
             }}>
               {day}
@@ -197,13 +197,13 @@ export default function Summary() {
               <div key={i} style={{
                 width: '32px',
                 height: '32px',
-                backgroundColor: dayExpenses > 0 ? `rgba(239, 68, 68, ${intensity})` : '#f1f5f9',
+                backgroundColor: dayExpenses > 0 ? `rgba(239, 68, 68, ${intensity})` : 'var(--color-surface-secondary)',
                 borderRadius: '4px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: '0.75rem',
-                color: intensity > 0.5 ? 'white' : '#64748b',
+                color: intensity > 0.5 ? 'white' : 'var(--color-text-secondary)',
                 border: '1px solid #e2e8f0'
               }}>
                 {i + 1}
@@ -211,14 +211,14 @@ export default function Summary() {
             );
           })}
         </div>
-        <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: '#64748b' }}>
+        <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'var(--color-text-secondary)' }}>
           Darker colors indicate higher spending days
         </div>
       </div>
 
       {/* Category Breakdown */}
       <div className="card">
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>Category Breakdown</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>Category Breakdown</h2>
         <div className="category-list">
           {categorySpending.map((category, index) => {
             const percentage = ((category.amount / thisMonthData.expenses) * 100).toFixed(1);
@@ -237,10 +237,10 @@ export default function Summary() {
                   </div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontWeight: '700', color: '#1e293b' }}>
+                  <div style={{ fontWeight: '700', color: 'var(--color-text-primary)' }}>
                     {formatCurrency(category.amount)}
                   </div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)' }}>
                     {percentage}%
                   </div>
                 </div>

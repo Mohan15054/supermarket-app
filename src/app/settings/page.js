@@ -76,7 +76,7 @@ export default function Settings() {
         height: '24px',
         borderRadius: '12px',
         border: 'none',
-        background: checked ? '#22c55e' : '#e2e8f0',
+        background: checked ? 'var(--color-success-500)' : 'var(--color-border)',
         position: 'relative',
         cursor: 'pointer',
         transition: 'all 0.2s ease'
@@ -104,7 +104,7 @@ export default function Settings() {
 
       {/* Profile Section */}
       <div className="card" style={{ marginBottom: '2rem' }}>
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>👤 Profile</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>👤 Profile</h2>
         
         <SettingItem
           icon="👤"
@@ -116,9 +116,11 @@ export default function Settings() {
             defaultValue={userData.name}
             style={{
               padding: '0.5rem',
-              border: '1px solid #e2e8f0',
+              border: '1px solid var(--color-border)',
               borderRadius: '6px',
-              width: '200px'
+              width: '200px',
+              background: 'var(--color-surface)',
+              color: 'var(--color-text-primary)'
             }}
           />
         </SettingItem>
@@ -133,9 +135,11 @@ export default function Settings() {
             defaultValue={userData.email}
             style={{
               padding: '0.5rem',
-              border: '1px solid #e2e8f0',
+              border: '1px solid var(--color-border)',
               borderRadius: '6px',
-              width: '200px'
+              width: '200px',
+              background: 'var(--color-surface)',
+              color: 'var(--color-text-primary)'
             }}
           />
         </SettingItem>
@@ -149,9 +153,11 @@ export default function Settings() {
             defaultValue={userData.currency}
             style={{
               padding: '0.5rem',
-              border: '1px solid #e2e8f0',
+              border: '1px solid var(--color-border)',
               borderRadius: '6px',
-              width: '120px'
+              width: '120px',
+              background: 'var(--color-surface)',
+              color: 'var(--color-text-primary)'
             }}
           >
             <option value="USD">USD ($)</option>
@@ -170,9 +176,11 @@ export default function Settings() {
             defaultValue={userData.timezone}
             style={{
               padding: '0.5rem',
-              border: '1px solid #e2e8f0',
+              border: '1px solid var(--color-border)',
               borderRadius: '6px',
-              width: '200px'
+              width: '200px',
+              background: 'var(--color-surface)',
+              color: 'var(--color-text-primary)'
             }}
           >
             <option value="America/New_York">Eastern Time</option>
@@ -186,7 +194,7 @@ export default function Settings() {
       {/* Categories Section */}
       <div className="card" style={{ marginBottom: '2rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-          <h2 style={{ color: '#1e293b' }}>🏷️ Categories</h2>
+          <h2 style={{ color: 'var(--color-text-primary)' }}>🏷️ Categories</h2>
           <button className="btn btn-primary" onClick={handleAddCategory}>
             + Add Category
           </button>
@@ -198,9 +206,9 @@ export default function Settings() {
               display: 'flex',
               alignItems: 'center',
               padding: '1rem',
-              background: 'white',
+              background: 'var(--color-surface)',
               borderRadius: '8px',
-              border: '1px solid #e2e8f0'
+              border: '1px solid var(--color-border)'
             }}>
               <div style={{
                 width: '32px',
@@ -216,8 +224,8 @@ export default function Settings() {
                 {category.icon}
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: '600', color: '#1e293b' }}>{category.name}</div>
-                <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                <div style={{ fontWeight: '600', color: 'var(--color-text-primary)' }}>{category.name}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)' }}>
                   {category.type === 'income' ? 'Income' : 'Expense'} Category
                 </div>
               </div>
@@ -230,7 +238,7 @@ export default function Settings() {
                   ✏️
                 </button>
                 <button 
-                  className="btn btn-danger"
+                  className="btn btn-error"
                   style={{ padding: '0.5rem', fontSize: '0.75rem' }}
                 >
                   🗑️
@@ -243,7 +251,7 @@ export default function Settings() {
 
       {/* Notifications Section */}
       <div className="card" style={{ marginBottom: '2rem' }}>
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>🔔 Notifications</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>🔔 Notifications</h2>
         
         <SettingItem
           icon="⏰"
@@ -281,7 +289,7 @@ export default function Settings() {
 
       {/* Security Section */}
       <div className="card" style={{ marginBottom: '2rem' }}>
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>🔒 Security</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>🔒 Security</h2>
         
         <SettingItem
           icon="🔢"
@@ -308,7 +316,7 @@ export default function Settings() {
 
       {/* Theme Section */}
       <div className="card" style={{ marginBottom: '2rem' }}>
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>🎨 Appearance</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>🎨 Appearance</h2>
         
         <SettingItem
           icon="🌙"
@@ -336,7 +344,7 @@ export default function Settings() {
 
       {/* Data Section */}
       <div className="card">
-        <h2 style={{ marginBottom: '1.5rem', color: '#1e293b' }}>💾 Data</h2>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>💾 Data</h2>
         
         <SettingItem
           icon="📤"
@@ -363,7 +371,7 @@ export default function Settings() {
           title="Clear All Data"
           description="Remove all transactions and reset the app"
         >
-          <button className="btn btn-danger">
+          <button className="btn btn-error">
             Clear Data
           </button>
         </SettingItem>

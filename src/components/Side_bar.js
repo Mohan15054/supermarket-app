@@ -5,7 +5,7 @@ import './Side_bar.css';
 import Link from 'next/link';
 
 
-const Sidebar = ({ menuItems }) => {
+const Sidebar = ({ menuItems, children }) => {
   // State to manage the open/close state of the sidebar
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('');
@@ -66,7 +66,7 @@ const Sidebar = ({ menuItems }) => {
     
     {/* Main content */}
     <div className={`main-content ${isOpen ? 'main-content-shifted' : 'main-content-normal'}`}>
-      {/* Main content goes here */}
+      {children}
     </div>
   </div>
 );

@@ -21,24 +21,34 @@ export default function Dashboard() {
         <p className="page-subtitle">Your financial overview at a glance</p>
       </div>
 
-      {/* Stats Cards */}
+      {/* Enhanced Stats Cards */}
       <div className="card-grid card-grid-4">
-        <div className="card stats-card balance">
+        <div className="card stats-card balance enhanced">
+          <div className="stats-icon">💰</div>
           <div className="stats-label">Total Balance</div>
           <div className="stats-value neutral">{formatCurrency(totalBalance)}</div>
+          <div className="stats-change positive">+2.5% from last month</div>
         </div>
-        <div className="card stats-card income">
+        <div className="card stats-card income enhanced">
+          <div className="stats-icon">📈</div>
           <div className="stats-label">This Month Income</div>
           <div className="stats-value positive">{formatCurrency(income)}</div>
+          <div className="stats-change positive">+12.3% from last month</div>
         </div>
-        <div className="card stats-card expense">
+        <div className="card stats-card expense enhanced">
+          <div className="stats-icon">💸</div>
           <div className="stats-label">This Month Expenses</div>
           <div className="stats-value negative">{formatCurrency(expenses)}</div>
+          <div className="stats-change negative">+8.7% from last month</div>
         </div>
-        <div className="card stats-card savings">
+        <div className="card stats-card savings enhanced">
+          <div className="stats-icon">🎯</div>
           <div className="stats-label">Savings</div>
           <div className={`stats-value ${savings >= 0 ? 'positive' : 'negative'}`}>
             {formatCurrency(savings)}
+          </div>
+          <div className={`stats-change ${savings >= 0 ? 'positive' : 'negative'}`}>
+            {savings >= 0 ? '+15.2%' : '-5.1%'} from last month
           </div>
         </div>
       </div>
@@ -46,7 +56,7 @@ export default function Dashboard() {
       <div className="dashboard-content">
         {/* Category Spending Chart */}
         <div className="card">
-          <h2 style={{ marginBottom: '1.5rem', color: '#717e93ff' }}>Top Spending Categories</h2>
+          <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>Top Spending Categories</h2>
           <div className="category-spending">
             {categorySpending.slice(0, 5).map((category, index) => (
               <div key={index} className="spending-item">
@@ -78,7 +88,7 @@ export default function Dashboard() {
 
         {/* Recent Transactions */}
         <div className="card">
-          <h2 style={{ marginBottom: '1.5rem', color: '#717e93ff' }}>Recent Transactions</h2>
+          <h2 style={{ marginBottom: '1.5rem', color: 'var(--color-text-primary)' }}>Recent Transactions</h2>
           <div className="transaction-list">
             {recentTransactions.map((transaction) => (
               <div key={transaction.id} className="transaction-item">

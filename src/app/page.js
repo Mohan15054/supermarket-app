@@ -68,7 +68,7 @@ export default function Home() {
         </h1>
         <p style={{ 
           fontSize: '1.25rem', 
-          color: '#64748b', 
+          color: 'var(--color-text-secondary)', 
           maxWidth: '600px', 
           margin: '0 auto',
           lineHeight: '1.6'
@@ -104,7 +104,7 @@ export default function Home() {
         <h2 style={{ 
           textAlign: 'center', 
           marginBottom: '2rem', 
-          color: '#1e293b',
+          color: 'var(--color-text-primary)',
           fontSize: '2rem',
           fontWeight: '700'
         }}>
@@ -138,7 +138,7 @@ export default function Home() {
                 
                 <h3 style={{ 
                   fontWeight: '600', 
-                  color: '#1e293b', 
+                  color: 'var(--color-text-primary)', 
                   marginBottom: '0.5rem',
                   fontSize: '1.125rem'
                 }}>
@@ -146,7 +146,7 @@ export default function Home() {
                 </h3>
                 
                 <p style={{ 
-                  color: '#64748b', 
+                  color: 'var(--color-text-secondary)', 
                   fontSize: '0.875rem',
                   lineHeight: '1.5',
                   flex: '1'
@@ -173,11 +173,11 @@ export default function Home() {
       {/* Call to Action */}
       <div className="card" style={{ 
         textAlign: 'center', 
-        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+        background: 'linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-secondary) 100%)',
         border: 'none'
       }}>
         <h3 style={{ 
-          color: '#1e293b', 
+          color: 'var(--color-text-primary)', 
           marginBottom: '1rem',
           fontSize: '1.5rem',
           fontWeight: '600'
@@ -185,7 +185,7 @@ export default function Home() {
           Ready to take control of your finances?
         </h3>
         <p style={{ 
-          color: '#64748b', 
+          color: 'var(--color-text-secondary)', 
           marginBottom: '2rem',
           fontSize: '1rem'
         }}>
