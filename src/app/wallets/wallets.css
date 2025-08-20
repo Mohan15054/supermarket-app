@@ -13,7 +13,7 @@
 }
 
 .wallets-balance-label {
-  color: #64748b;
+  color: var(--color-text-secondary);
   font-size: 1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
@@ -22,7 +22,7 @@
 .wallets-balance-amount {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: var(--color-primary-500);
 }
 
 .wallets-actions {

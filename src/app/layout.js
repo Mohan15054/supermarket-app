@@ -28,12 +28,11 @@ export default function RootLayout({ children }) {
   ];
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark-mode-default">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div style={{ display: "flex" }}>
-          <Sidebar menuItems={menuItems} />
-          <main style={{ flex: 1 }}>{children}</main>
-        </div>
+        <Sidebar menuItems={menuItems}>
+          {children}
+        </Sidebar>
       </body>
     </html>
   );
