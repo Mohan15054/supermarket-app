@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/Side_bar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +18,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const menuItems = [
+    { name: "Dashboard", icon: "📊" },
+    { name: "Expenses", icon: "💰" },
+    { name: "Wallets", icon: "👛" },
+    { name: "Summary", icon: "📈" },
+    { name: "Accounts", icon: "👤" },
+    { name: "Settings", icon: "⚙️" },
+  ];
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <div style={{ display: "flex" }}>
+          <Sidebar menuItems={menuItems} />
+          <main style={{ flex: 1 }}>{children}</main>
+        </div>
       </body>
     </html>
   );
