@@ -211,3 +211,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 **Start tracking your expenses today!** 🚀
+
+
+## deploy:
+
+npm run build
+git add .
+git commit -m "Your update message"
+git subtree push --prefix out origin gh-pages
